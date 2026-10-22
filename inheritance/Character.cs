@@ -2,8 +2,9 @@ using System;
 
 namespace InheritanceMinigame.Classes
 {
-    public class Character
+    public abstract class Character
     {
+        protected string BattleCry { get; set; } = "Charge!";
         public string Name {get; set;}
         public int Health {get; set;}
         public int MaxHealth{get; set;}
@@ -26,6 +27,6 @@ namespace InheritanceMinigame.Classes
             
             Console.WriteLine($"{Name} takes {damage} damage! (HP: {Health}/{MaxHealth})");
         }
-        public virtual void PerformAttack(Character target) {}
+        public abstract void PerformAttack(Character target);
     }
 }

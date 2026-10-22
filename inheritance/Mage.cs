@@ -2,7 +2,7 @@ using System;
 
 namespace InheritanceMinigame.Classes
 {
-    public class Mage : Character
+    public sealed class Mage : Character
     {
         public int Mana {get; private set; } = 50;
         public Mage(string name) : base(name, 80, 25) {}
